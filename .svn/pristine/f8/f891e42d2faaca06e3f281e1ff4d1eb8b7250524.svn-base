@@ -1,0 +1,55 @@
+/**
+ * 
+ */
+package sprittr.web;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import sprittr.dao.AsUserMapper;
+import sprittr.pojo.AsUser;
+
+/**   
+ * @Title:
+ * @Package 
+ * @Description: 
+ * @author huangxw
+ * @date 2017年04月10日
+ * @version V1.0   
+ */
+@Controller
+public class sprittController{
+	private static Logger logger =LoggerFactory.getLogger(sprittController.class);
+	
+    @Autowired
+	private AsUserMapper asUserMapper;
+    
+	@RequestMapping(value="/toasyeee",method = RequestMethod.GET)
+	@ResponseBody
+	public Object asyeee(String ces){
+		logger.debug("************************日志记录开始***************"+ces);
+		
+		
+		AsUser obj  = asUserMapper.findBySysUserIdd("0");
+		Integer d=34;
+		System.out.println(d==34);
+logger.debug("结果是:"+obj.getAccount());
+//		try {
+//			File fl = new File("c://a.text");
+
+//			throw new StatusSuccess("sprttController not eeror");
+//		} catch (BaseException e) {
+//			return "404";
+//		}
+return obj;
+	}
+	public static void main(String[] args) {
+		Integer sot=23;
+		System.out.println(sot.equals(23));
+	}
+	
+}

@@ -1,0 +1,32 @@
+﻿/**傲视传媒**/
+
+/**set1：澳视商户创建 创建人:黄旭文as_shop 2017-03-03 14:11:00 start**/
+INSERT INTO redrain.as_shop (shop_id, name, logo_url, qr_code_url, main_pic_url, create_time, store_id, descp, tel, contact, floor, business_district_id, trade_category_id, address, contact_mail, count_num, type, province_id, city_id, area_id, lng, lat) 
+VALUES ('113', '澳视传媒', 'ascmMall/shop/de37b0af8f0645dba67bdebf63b8f128.jpg', '', 'ascmMall/shop/mainPicUrl/3bd087289ea244d798f583804045399d.jpg', '2017-03-03 13:41:25', '0', NULL, '02022127508', '周生', '5', '0', '56', '广州市萝岗区澳视传媒', 'ad@as-cm.com', '0', '2', '19', '1601', '50257', '113.522574', '23.256272');
+/**set1：2017-03-03 14:11:00 end**/
+
+/**set2： 澳视商户后台角色创建 sys_user 创建人:黄旭文as_shop 2017-03-03 14:11:00 start**/
+INSERT INTO redrain.sys_user (USER_ID, USERNAME, PASSWORD, NAME, RIGHTS, ROLE_ID, LAST_LOGIN, IP, STATUS, BZ, SKIN, EMAIL, NUMBER, PHONE, as_user_id, as_shop_id, create_by) 
+VALUES('66adbb5f33cc417a971090d0c8c77697', 'aoshi', 'eb222d278f1507776a357b51e1f6c0ce6b01f849', 'aoshi', NULL, '212274fb01e24992829d341e941f8ea8', NULL, NULL, '0', NULL, NULL, NULL, NULL, NULL, NULL, '113', '1');
+/**set2：2017-03-03 14:11:00 end**/
+
+/**set3： 澳视商户后台账号创建 as_user 创建人:黄旭文as_shop 2017-03-03 14:11:00 start**/
+INSERT INTO redrain.as_user (user_id,
+ 啥地方 password, account, create_time, status, type, sys_user_id) 
+VALUES ('516', 'c4ca4238a0b923820dcc509a6f75849b', 'aoshi', '2017-03-03 13:41:25', '0', '1', '66adbb5f33cc417a971090d0c8c77697');
+/**set3：2017-03-03 14:11:00 end**/
+
+/**set4：澳视商户管理员 as_shop_owner_info 创建 创建人:黄旭文as_shop 2017-03-03 14:11:00 start**/
+INSERT INTO redrain.as_shop_owner_info (shop_owner_info_id, user_id, status, shop_id, name, screen_domain_id, create_time, tel, email)
+VALUES ('153', '516', '0', '113', '澳视传媒', NULL, '', '02022127508', 'ad@as-cm.com');
+/**set4：2017-03-03 14:11:00 end**/3
+
+/** se:5：澳视商户员工管理员账号 as_user 创建 创建人:黄旭文as_shop 2017-03-03 14:11:00 start**/
+INSERT INTO redrain.as_user (user_id, password, account, create_time, status, type, sys_user_id) 
+VALUES ('517', 'c4ca4238a0b923820dcc509a6f75849b', 'aoshi', '2017-03-03 13:41:25', '0', '2', '');
+/**set5： 2017-03-03 14:11:00 end**/2
+
+/** set6：澳视商户员工管理员创建 as_shop_staff_info 创建人:黄旭文as_shop 2017-03-03 14:11:00 start**/
+INSERT INTO redrain.as_shop_staff_info (shop_staff_info_id, user_id, shop_user_id, status, shop_id, descp, update_time, sys_user_id, name, sn, user_head, create_time, tel, email, screen_domain_id) 
+VALUES ('178', '517', '516', '0', '113', '', NULL, '0', '澳视传媒', 'bbea4c8f75c942ab9b24a86a0aedaef1', '', '', '02022127508', 'ad@as-cm.com', '0');
+/**set6：2017-03-03 14:11:00 end**/1
