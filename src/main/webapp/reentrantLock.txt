@@ -1,0 +1,243 @@
+﻿httpblog.csdn.netaesop_wuboarticledetails7574379
+http://10305101ivy.blog.163.com/blog/static/5847658920135434648580/ 
+bootstarp 日期 使用判断 http://10305101ivy.blog.163.com/blog/static/5847658920135434648580/
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Column 'create_time' specified twice  xml字段有两个相同点实体属性
+org.apache.jasper.JasperException: /WEB-INF/jsp/business/yp/shopYp/userlistAll.jsp (line: 84, column: 6) The end tag "&lt;/c:forEach" is unbalanced   jspd参数帮定失败
+
+Exception in thread "main" org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'testBean' is defined
+Bean 没有扫描到
+
+jsp页面传到后台的属性是个逗号  页面有两个相同的元素
+java file 使用反斜杠 new File("d:/e/a")
+
+$('#startTime').datepicker().on('changeDate',function(ev){
+		  var startTime = ev.date.valueOf();
+		  $("#sTime").val(startTime);
+		   });
+	$('#endTime').datepicker().on('changeDate',function(ev){
+		  var entt = ev.date.valueOf();
+		  $("#eTime").val(entt);
+	});
+});
+var cdate = getNowFormatDate();
+var nowdate= cdate.replace(/-/g,'/');
+var nowDateTime =new Date(nowdate);
+//获取当前日期 返回 yyyy-mm-dd
+function getNowFormatDate() {
+    var date = new Date();
+    var seperator1 = "-";
+    var seperator2 = ":";
+    var year = date.getFullYear();
+    var month = date.getMonth() + 1;
+    var strDate = date.getDate();
+    if (month >= 1 && month <= 9) {
+        month = "0" + month;
+    }
+    if (strDate >= 0 && strDate <= 9) {
+        strDate = "0" + strDate;
+    }
+    var currentdate = year + seperator1 + month + seperator1 + strDate;
+    return currentdate;
+}
+//日期非空判断
+dateIsEmptyXw(sTime, eTime){
+  if(sTime==""||$.trim(eTime)=="" || sTime==""||$.trim(eTime)==""){
+		return false;
+  }
+  return true;
+}
+//当前日期与结束日期判断   
+checkDateXw(eTime){
+  if(etime<nowDateTime.getTime()){
+	return false;		
+  } 
+	return true;
+}
+//非整数判断  
+isNumberXw(num){
+	var v_num = parseInt(num);
+    if(isNaN(v_num)||v_num<=0||!(/^\d+$/.test(v_num)))
+    {
+       return fasle
+    }
+	return true;
+}
+
+//非空判断  
+isNullXw(str){
+	if(str=="" ||$.trim(str)=="" || str.replace(/(^\d*)|(\s$)/g,'')==""){
+	return false;
+	}
+	return true;
+}
+//文件上传验证
+	  var maxsize = 20;//2M
+	  var errMsg = "上传的附件文件不能超过2M！！！";
+	  var tipMsg = "您的浏览器暂不支持计算上传文件的大小，确保上传文件不要超过2M，建议使用IE、FireFox、Chrome浏览器。";
+	  var  browserCfg = {};
+	  var ua = window.navigator.userAgent;
+	  if (ua.indexOf("MSIE")>=1){
+	   browserCfg.ie = true;
+	  }else if(ua.indexOf("Firefox")>=1){
+	   browserCfg.firefox = true;
+	  }else if(ua.indexOf("Chrome")>=1){
+	   browserCfg.chrome = true;
+	  }
+function checkfile(){
+	 try{
+	 var obj_file = document.getElementById("fileInput");
+	 if(obj_file.value==""){
+	  alert("请先选择上传文件");
+	  return;
+	 }
+	 var filesize = 0;
+	 if(browserCfg.firefox || browserCfg.chrome ){
+	  filesize = obj_file.files[0].size;
+	 }else if(browserCfg.ie){
+	  var obj_img = document.getElementById('tempimg');
+	  obj_img.dynsrc=obj_file.value;
+	  filesize = obj_img.fileSize;
+	 }else{
+	  alert(tipMsg);
+	   return;
+	 }
+	 if(filesize==-1){
+	  alert(tipMsg);
+	  return;
+	 }else if(filesize>maxsize){
+	  alert(errMsg);
+	  return;
+	}else{
+	 alert("文件大小符合要求");
+	  return;
+	}
+   }catch(e){
+	alert(e);
+   }
+}
+
+//INPUT TYPE=SUBMINT表单提交 防止
+$(function(){
+  $("#myform").submit(function(e){  
+   if($("#search").val()==""){
+    alert("搜索内容不能为空");
+    e.preventDefault();
+   }
+  });
+ });
+ 
+ 
+ //JSON 字符串转json对象
+ JSON.parse(cityList)
+ //用于从一个对象解析出字符串
+ JSON.stringify(JSON.parse(cityList))
+ //字符数组转json字符串
+ JSONArray.fromObject(cityList);
+ //将 JavaScript 值转换为 JavaScript 对象表示法 (Json) 字符串。
+ //select组
+     if(!$("#cityId").val()) {
+				      var data1="${cityList}";
+				      var data12 = [{"py":"h","cityName":"湖南", 
+				    	"province":{"provinceName":"长沙","provinceId":19},"cityId":1601,"provinceId":19},
+				    	{"py":"h","cityName":"湖北",
+				    	"province":{"provinceName":"邯郸","provinceId":19},"cityId":1601,"provinceId":19},
+				    	{"py":"e","cityName":"河北",
+				    	"province":{"provinceName":"石家庄","provinceId":18},"cityId":1602,"provinceId":18}
+				    	,{"py":"e","cityName":"河南",
+				    	"province":{"provinceName":"郑州","provinceId":18},"cityId":1602,"provinceId":18},{"py":"h","cityName":"湖南", 
+				    	"province":{"provinceName":"长沙","provinceId":19},"cityId":1601,"provinceId":19},
+				    	{"py":"h","cityName":"湖北",
+				    	"province":{"provinceName":"邯郸","provinceId":19},"cityId":1601,"provinceId":19},
+				    	{"py":"e","cityName":"河北",
+				    	"province":{"provinceName":"石家庄","provinceId":18},"cityId":1602,"provinceId":18}
+				    	,{"py":"e","cityName":"河南",
+				    	"province":{"provinceName":"郑州","provinceId":18},"cityId":1602,"provinceId":18}];
+				      var arr = ["h","e"]; 
+				      var provinceIdTag = $("#provinceId");
+				      $.each(arr, function(i, sr){ 
+					     var n=sr;
+					     var fg=true;
+					     var opty = $("<optgroup label='"+n+"'>");
+					     provinceIdTag.append(opty);
+					  $.each(data1, function(i, list){ 
+						  if(fg){
+						  var id = list.provinceId;
+						 if(n==list.py){
+					      $.each(data1, function(i, li){ 
+				    	   if(n==li.py && list.provinceId==li.provinceId) {
+						   var value = li.cityId;
+						   var option = li.cityName;
+						   var label = $("<option value='"+value+"'>"+option+"</option>");
+						   opty.append(label);
+						  }
+					       });
+					      provinceIdTag.append("</optgroup>");
+					      fg=false;
+						  }
+						  }
+			           });
+				  });
+			}
+			
+			
+
+boostarp 时间差判断
+
+
+//计算天数差的函数，通用  
+
+var sdate =$("#startTime").val();
+		var edate = $("#endTime").val();
+		if(sdate!==''&& edate!=''){
+			if(computeDateDiff($("#startTime").val(),$("#endTime").val()))
+				alert("请看提示");
+			$("#recordForm").reset();
+		}
+	   $(function() {
+			//日期框
+			$('.date-picker').datepicker();
+			//下拉框
+			$(".chzn-select").chosen(); 
+			$(".chzn-select-deselect").chosen({allow_single_deselect:true}); 
+			
+			$('#startTime').datepicker({  
+			    todayBtn : "linked",  
+			    autoclose : true,  
+			    todayHighlight : true,  
+			    endDate : new Date()  
+			}).on('changeDate',function(e){  
+			    var startTime = e.date;  
+			    $('#endTime').datepicker('setStartDate',startTime);  
+			});  
+			//结束时间：  
+			$('#endTime').datepicker({  
+			    todayBtn : "linked",  
+			    autoclose : true,  
+			    todayHighlight : true,   
+			}).on('changeDate',function(e){  
+			    var endTime = e.date;  
+			    $('#startTime').datepicker('setEndDate',endTime);  
+			});
+		});
+	   function  computeDateDiff(sDate1,  sDate2){    //sDate1和sDate2是2006-12-18格式  
+		   computeYearType();
+	       var  aDate,  oDate1,  oDate2,  iDays  
+	       aDate  =  sDate1.split("-")  
+	       oDate1  =  new  Date(aDate[0]  +  '-'  +  aDate[1]  +  '-'  +  aDate[2])    //转换为2016-10-10格式  
+	       aDate  =  sDate2.split("-")  
+	       oDate2  =  new  Date(aDate[0]  +  '-'  +  aDate[1]  +  '-'  +  aDate[2])  
+	       iDays  =  parseInt(Math.abs(oDate1  -  oDate2)  /  1000  /  60  /  60  /24)    //把相差的毫秒数转换为天数  
+	       var flag =true;
+	       if(computeYearType()){
+	    	   flag = 366-iDay >= 0?false:true;
+	       }
+	       if(computeYearType()){
+	    	   flag = 365-iDay >= 0?false:true;
+	       }
+	       return  flag;  
+	   } 
+	   function computeYearType(){
+		   var date=new Date;
+		   var year=date.getFullYear(); 
+		   return year % 4 == 0 && year % 100 != 0 && year % 400 ==0;
+	   }

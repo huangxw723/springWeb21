@@ -55,6 +55,8 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="shiro-all-1.2.3" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.poi:poi:3.16" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.commons:commons-collections4:4.1" level="project" />
     <orderEntry type="module-library">
       <library name="Maven: shiro:shiro:1.0">
         <CLASSES>
@@ -142,5 +144,7 @@
     <orderEntry type="library" name="Maven: javax.xml:jaxrpc-api:1.1" level="project" />
     <orderEntry type="library" name="Maven: jstl:jstl:1.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.slf4j:slf4j-log4j12:1.7.20" level="project" />
+    <orderEntry type="library" name="poi-ooxml-schemas-3.9-20121203" level="project" />
+    <orderEntry type="library" name="poi-3.17-beta1" level="project" />
   </component>
 </module>

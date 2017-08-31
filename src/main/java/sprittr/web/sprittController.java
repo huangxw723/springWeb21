@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import sprittr.dao.AsUserMapper;
 import sprittr.pojo.AsUser;
 
-
 /**   
  * @Title:
  * @Package 
@@ -39,7 +38,7 @@ public class sprittController{
 	@ResponseBody
 	public Object asyeee(String ces){
 		logger.debug("************************日志记录开始***************"+ces);
-		AsUser obj = new AsUser();
+		AsUser obj=new AsUser();
 		try{
 
 			// 开启事务
