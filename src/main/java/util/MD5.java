@@ -50,6 +50,6 @@ public class MD5 {
 
 	//»ùÓÚSha512Hash¼ÓÃÜ
 	public static String Sha512Hash(String str,Object salt,int count) {
-		return new new Sha512Hash(str, salt, count).toBase64();;
+		return new Sha512Hash(str, salt, count).toBase64();
 	}
 }
